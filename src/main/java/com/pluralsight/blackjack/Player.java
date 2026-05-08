@@ -1,15 +1,20 @@
 package com.pluralsight.blackjack;
 
-import com.sun.tools.javac.Main;
-
-import java.util.Scanner;
-
 public class Player {
-    Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args) {
-        System.out.println("Enter All Player Names In Order: (Ex. John, Jacob, Jiggleheimer, Schmidt" );
+    private String name;
+    private Hand hand; // This assumes you have a Hand class!
 
+    public Player(String name) {
+        this.name = name;
+        this.hand = new Hand();
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public Hand getHand() {
+        return hand;
+    }
 }
+
